@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "898A01251B85690400056C56"
+               BlueprintIdentifier = "898A03251B85796400056C56"
                BuildableName = "WeChat.app"
                BlueprintName = "WeChat"
                ReferencedContainer = "container:WeChat.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "898A013E1B85690400056C56"
+               BlueprintIdentifier = "898A033E1B85796500056C56"
                BuildableName = "WeChatTests.xctest"
                BlueprintName = "WeChatTests"
                ReferencedContainer = "container:WeChat.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "898A013E1B85690400056C56"
+               BlueprintIdentifier = "898A033E1B85796500056C56"
                BuildableName = "WeChatTests.xctest"
                BlueprintName = "WeChatTests"
                ReferencedContainer = "container:WeChat.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "898A01251B85690400056C56"
+            BlueprintIdentifier = "898A03251B85796400056C56"
             BuildableName = "WeChat.app"
             BlueprintName = "WeChat"
             ReferencedContainer = "container:WeChat.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "898A01251B85690400056C56"
+            BlueprintIdentifier = "898A03251B85796400056C56"
             BuildableName = "WeChat.app"
             BlueprintName = "WeChat"
             ReferencedContainer = "container:WeChat.xcodeproj">
@@ -95,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "898A01251B85690400056C56"
+            BlueprintIdentifier = "898A03251B85796400056C56"
             BuildableName = "WeChat.app"
             BlueprintName = "WeChat"
             ReferencedContainer = "container:WeChat.xcodeproj">
