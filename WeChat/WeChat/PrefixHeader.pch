@@ -13,5 +13,18 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #import <UIKit/UIKit.h>
+#import "Category/CategoryWF.h"
+#import "MBProgessHUD/MBProgressHUD+HM.h"
+#import "UserInfo.h"
+
+
+//自定义log
+#ifdef DEBUG
+#define LCLog(...) NSLog(@"%s %d \n %@\n\n",__func__,__LINE__,__VA_ARGS__)
+#else
+#define LCLog(...)
+#endif
+
+
 
 #endif

@@ -25,7 +25,7 @@
         <!--登录界面-->
         <scene sceneID="oMr-E5-Zoc">
             <objects>
-                <viewController id="BHN-lk-KK6" userLabel="登录界面" sceneMemberID="viewController">
+                <viewController id="BHN-lk-KK6" userLabel="登录界面" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SC4-AM-nTR"/>
                         <viewControllerLayoutGuide type="bottom" id="W7d-se-Ga0"/>
@@ -99,6 +99,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tSN-8Y-bo9"/>
+                    <connections>
+                        <outlet property="userLabel" destination="AH4-Pa-GfM" id="a4d-XR-FOu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKv-g1-8SY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,7 +126,7 @@
         <!--其它方式登录-->
         <scene sceneID="gHU-Ev-YGP">
             <objects>
-                <viewController id="tr7-Kf-vMd" userLabel="其它方式登录" sceneMemberID="viewController">
+                <viewController id="tr7-Kf-vMd" userLabel="其它方式登录" customClass="OtherLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iWK-oa-JrC"/>
                         <viewControllerLayoutGuide type="bottom" id="y5C-mU-5Nc"/>
@@ -135,18 +138,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aih-vT-il7">
                                 <rect key="frame" x="100" y="107" width="400" height="200"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ypL-nR-lVE">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ypL-nR-lVE" userLabel="用户名">
                                         <rect key="frame" x="8" y="21" width="384" height="42"/>
-                                        <color key="backgroundColor" red="0.094117647060000004" green="0.71764705880000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="61r-wN-wRl"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1S7-kx-FOQ">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1S7-kx-FOQ" userLabel="密码">
                                         <rect key="frame" x="8" y="76" width="384" height="42"/>
-                                        <color key="backgroundColor" red="0.53145216409999996" green="1" blue="0.74999086479999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="bbS-pw-kNQ"/>
                                         </constraints>
@@ -158,9 +159,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="BdF-np-VbR"/>
                                         </constraints>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="登录">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginButtonClick:" destination="tr7-Kf-vMd" eventType="touchUpInside" id="yPg-iE-1r1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -186,6 +190,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vMD-XQ-oFz"/>
+                    <connections>
+                        <outlet property="leftCos" destination="8to-FY-6fn" id="ehZ-Fp-Zxu"/>
+                        <outlet property="loginButton" destination="LTd-tz-ghV" id="3LJ-MH-vFm"/>
+                        <outlet property="pswTf" destination="1S7-kx-FOQ" id="Wv8-qJ-mlZ"/>
+                        <outlet property="rightCos" destination="NCv-cF-jfo" id="GJg-XT-PuZ"/>
+                        <outlet property="userTf" destination="ypL-nR-lVE" id="eeM-ed-rDr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOT-uc-6CN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

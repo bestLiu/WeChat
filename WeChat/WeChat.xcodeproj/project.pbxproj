@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89164E181B86CADB0071EF83 /* OtherLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E171B86CADB0071EF83 /* OtherLoginViewController.m */; };
+		89164E271B86CCFA0071EF83 /* UIButton+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E1C1B86CCFA0071EF83 /* UIButton+WF.m */; };
+		89164E281B86CCFA0071EF83 /* UIImage+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E1E1B86CCFA0071EF83 /* UIImage+WF.m */; };
+		89164E291B86CCFA0071EF83 /* UIScreen+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E201B86CCFA0071EF83 /* UIScreen+WF.m */; };
+		89164E2A1B86CCFA0071EF83 /* UIStoryboard+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E221B86CCFA0071EF83 /* UIStoryboard+WF.m */; };
+		89164E2B1B86CCFA0071EF83 /* UITextField+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E241B86CCFA0071EF83 /* UITextField+WF.m */; };
+		89164E2C1B86CCFA0071EF83 /* UIView+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E261B86CCFA0071EF83 /* UIView+WF.m */; };
+		89164E331B86FB470071EF83 /* MBProgressHUD+HM.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E2F1B86FB470071EF83 /* MBProgressHUD+HM.m */; };
+		89164E341B86FB470071EF83 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 89164E301B86FB470071EF83 /* MBProgressHUD.bundle */; };
+		89164E351B86FB470071EF83 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E321B86FB470071EF83 /* MBProgressHUD.m */; };
+		89164E3B1B870B8E0071EF83 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E3A1B870B8E0071EF83 /* BaseNavigationController.m */; };
+		89164E3E1B87138E0071EF83 /* PersonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E3D1B87138E0071EF83 /* PersonTableViewController.m */; };
+		89164E411B87184C0071EF83 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E401B87184C0071EF83 /* LoginViewController.m */; };
+		89164E451B8719CB0071EF83 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E441B8719CB0071EF83 /* UserInfo.m */; };
 		898A07781B85BDC200056C56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 898A07771B85BDC200056C56 /* main.m */; };
 		898A077B1B85BDC200056C56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 898A077A1B85BDC200056C56 /* AppDelegate.m */; };
 		898A077E1B85BDC200056C56 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898A077D1B85BDC200056C56 /* ViewController.m */; };
@@ -158,6 +172,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89164E161B86CADB0071EF83 /* OtherLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherLoginViewController.h; sourceTree = "<group>"; };
+		89164E171B86CADB0071EF83 /* OtherLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherLoginViewController.m; sourceTree = "<group>"; };
+		89164E1A1B86CCFA0071EF83 /* CategoryWF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryWF.h; sourceTree = "<group>"; };
+		89164E1B1B86CCFA0071EF83 /* UIButton+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WF.h"; sourceTree = "<group>"; };
+		89164E1C1B86CCFA0071EF83 /* UIButton+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WF.m"; sourceTree = "<group>"; };
+		89164E1D1B86CCFA0071EF83 /* UIImage+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WF.h"; sourceTree = "<group>"; };
+		89164E1E1B86CCFA0071EF83 /* UIImage+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WF.m"; sourceTree = "<group>"; };
+		89164E1F1B86CCFA0071EF83 /* UIScreen+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+WF.h"; sourceTree = "<group>"; };
+		89164E201B86CCFA0071EF83 /* UIScreen+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+WF.m"; sourceTree = "<group>"; };
+		89164E211B86CCFA0071EF83 /* UIStoryboard+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+WF.h"; sourceTree = "<group>"; };
+		89164E221B86CCFA0071EF83 /* UIStoryboard+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+WF.m"; sourceTree = "<group>"; };
+		89164E231B86CCFA0071EF83 /* UITextField+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+WF.h"; sourceTree = "<group>"; };
+		89164E241B86CCFA0071EF83 /* UITextField+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+WF.m"; sourceTree = "<group>"; };
+		89164E251B86CCFA0071EF83 /* UIView+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WF.h"; sourceTree = "<group>"; };
+		89164E261B86CCFA0071EF83 /* UIView+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WF.m"; sourceTree = "<group>"; };
+		89164E2E1B86FB470071EF83 /* MBProgressHUD+HM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+HM.h"; sourceTree = "<group>"; };
+		89164E2F1B86FB470071EF83 /* MBProgressHUD+HM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+HM.m"; sourceTree = "<group>"; };
+		89164E301B86FB470071EF83 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		89164E311B86FB470071EF83 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		89164E321B86FB470071EF83 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		89164E391B870B8E0071EF83 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		89164E3A1B870B8E0071EF83 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		89164E3C1B87138E0071EF83 /* PersonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonTableViewController.h; sourceTree = "<group>"; };
+		89164E3D1B87138E0071EF83 /* PersonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTableViewController.m; sourceTree = "<group>"; };
+		89164E3F1B87184C0071EF83 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		89164E401B87184C0071EF83 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		89164E421B87199E0071EF83 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		89164E431B8719CB0071EF83 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		89164E441B8719CB0071EF83 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		898A07721B85BDC200056C56 /* WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898A07761B85BDC200056C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		898A07771B85BDC200056C56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -463,6 +506,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89164E121B86CA1D0071EF83 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89164E3F1B87184C0071EF83 /* LoginViewController.h */,
+				89164E401B87184C0071EF83 /* LoginViewController.m */,
+				89164E161B86CADB0071EF83 /* OtherLoginViewController.h */,
+				89164E171B86CADB0071EF83 /* OtherLoginViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		89164E191B86CCFA0071EF83 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				89164E1A1B86CCFA0071EF83 /* CategoryWF.h */,
+				89164E1B1B86CCFA0071EF83 /* UIButton+WF.h */,
+				89164E1C1B86CCFA0071EF83 /* UIButton+WF.m */,
+				89164E1D1B86CCFA0071EF83 /* UIImage+WF.h */,
+				89164E1E1B86CCFA0071EF83 /* UIImage+WF.m */,
+				89164E1F1B86CCFA0071EF83 /* UIScreen+WF.h */,
+				89164E201B86CCFA0071EF83 /* UIScreen+WF.m */,
+				89164E211B86CCFA0071EF83 /* UIStoryboard+WF.h */,
+				89164E221B86CCFA0071EF83 /* UIStoryboard+WF.m */,
+				89164E231B86CCFA0071EF83 /* UITextField+WF.h */,
+				89164E241B86CCFA0071EF83 /* UITextField+WF.m */,
+				89164E251B86CCFA0071EF83 /* UIView+WF.h */,
+				89164E261B86CCFA0071EF83 /* UIView+WF.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		89164E2D1B86FB470071EF83 /* MBProgessHUD */ = {
+			isa = PBXGroup;
+			children = (
+				89164E2E1B86FB470071EF83 /* MBProgressHUD+HM.h */,
+				89164E2F1B86FB470071EF83 /* MBProgressHUD+HM.m */,
+				89164E301B86FB470071EF83 /* MBProgressHUD.bundle */,
+				89164E311B86FB470071EF83 /* MBProgressHUD.h */,
+				89164E321B86FB470071EF83 /* MBProgressHUD.m */,
+			);
+			path = MBProgessHUD;
+			sourceTree = "<group>";
+		};
+		89164E461B871E8B0071EF83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				89164E421B87199E0071EF83 /* Singleton.h */,
+				89164E431B8719CB0071EF83 /* UserInfo.h */,
+				89164E441B8719CB0071EF83 /* UserInfo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		89164E471B871EAB0071EF83 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				89164E391B870B8E0071EF83 /* BaseNavigationController.h */,
+				89164E3A1B870B8E0071EF83 /* BaseNavigationController.m */,
+			);
+			name = BaseViewController;
+			sourceTree = "<group>";
+		};
+		89164E481B87237A0071EF83 /* 个人中心 */ = {
+			isa = PBXGroup;
+			children = (
+				89164E3C1B87138E0071EF83 /* PersonTableViewController.h */,
+				89164E3D1B87138E0071EF83 /* PersonTableViewController.m */,
+			);
+			name = "个人中心";
+			sourceTree = "<group>";
+		};
 		898A07691B85BDC200056C56 = {
 			isa = PBXGroup;
 			children = (
@@ -487,8 +601,6 @@
 			isa = PBXGroup;
 			children = (
 				898A096E1B85BE8B00056C56 /* Classes */,
-				898A07791B85BDC200056C56 /* AppDelegate.h */,
-				898A077A1B85BDC200056C56 /* AppDelegate.m */,
 				898A07821B85BDC200056C56 /* Images.xcassets */,
 				898A07841B85BDC200056C56 /* LaunchScreen.xib */,
 				898A07751B85BDC200056C56 /* Supporting Files */,
@@ -1310,6 +1422,7 @@
 		898A096C1B85BE6900056C56 /* 登录 */ = {
 			isa = PBXGroup;
 			children = (
+				89164E121B86CA1D0071EF83 /* Controller */,
 				898A09691B85BE4B00056C56 /* Login.storyboard */,
 			);
 			name = "登录";
@@ -1321,6 +1434,7 @@
 				898A077C1B85BDC200056C56 /* ViewController.h */,
 				898A077D1B85BDC200056C56 /* ViewController.m */,
 				898A077F1B85BDC200056C56 /* Main.storyboard */,
+				89164E481B87237A0071EF83 /* 个人中心 */,
 			);
 			name = "主页";
 			sourceTree = "<group>";
@@ -1328,9 +1442,13 @@
 		898A096E1B85BE8B00056C56 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				898A07791B85BDC200056C56 /* AppDelegate.h */,
+				898A077A1B85BDC200056C56 /* AppDelegate.m */,
+				89164E461B871E8B0071EF83 /* Model */,
+				89164E471B871EAB0071EF83 /* BaseViewController */,
 				898A09731B85C17300056C56 /* Libs */,
-				898A096D1B85BE7C00056C56 /* 主页 */,
 				898A096C1B85BE6900056C56 /* 登录 */,
+				898A096D1B85BE7C00056C56 /* 主页 */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1338,6 +1456,8 @@
 		898A09731B85C17300056C56 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				89164E2D1B86FB470071EF83 /* MBProgessHUD */,
+				89164E191B86CCFA0071EF83 /* Category */,
 				898A079B1B85BE3500056C56 /* XMPP */,
 			);
 			name = Libs;
@@ -1429,6 +1549,7 @@
 				898A07861B85BDC200056C56 /* LaunchScreen.xib in Resources */,
 				898A09621B85BE3600056C56 /* README.txt in Resources */,
 				898A07831B85BDC200056C56 /* Images.xcassets in Resources */,
+				89164E341B86FB470071EF83 /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1446,12 +1567,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89164E181B86CADB0071EF83 /* OtherLoginViewController.m in Sources */,
 				898A094D1B85BE3600056C56 /* XEP_0223.m in Sources */,
 				898A091E1B85BE3600056C56 /* XMPPvCard.xcdatamodeld in Sources */,
 				898A08F71B85BE3600056C56 /* XMPPModule.m in Sources */,
+				89164E411B87184C0071EF83 /* LoginViewController.m in Sources */,
 				898A08FE1B85BE3600056C56 /* XMPPProcessOne.m in Sources */,
 				898A09361B85BE3600056C56 /* XMPPTransports.m in Sources */,
 				898A08F51B85BE3600056C56 /* XMPPJID.m in Sources */,
+				89164E351B86FB470071EF83 /* MBProgressHUD.m in Sources */,
 				898A08F11B85BE3600056C56 /* NSNumber+XMPP.m in Sources */,
 				898A09481B85BE3600056C56 /* XMPPAutoPing.m in Sources */,
 				898A093C1B85BE3600056C56 /* XMPPCapabilities.m in Sources */,
@@ -1480,6 +1604,7 @@
 				898A09561B85BE3600056C56 /* RFImageToDataTransformer.m in Sources */,
 				898A08FD1B85BE3600056C56 /* XMPPGoogleSharedStatus.m in Sources */,
 				898A09141B85BE3600056C56 /* XMPPRoomHybrid.xcdatamodeld in Sources */,
+				89164E2A1B86CCFA0071EF83 /* UIStoryboard+WF.m in Sources */,
 				898A09081B85BE3600056C56 /* XMPPRoster.m in Sources */,
 				898A09571B85BE3600056C56 /* XMPPIDTracker.m in Sources */,
 				898A09321B85BE3600056C56 /* NSDate+XMPPDateTimeProfiles.m in Sources */,
@@ -1487,6 +1612,7 @@
 				898A08F61B85BE3600056C56 /* XMPPMessage.m in Sources */,
 				898A08F31B85BE3600056C56 /* XMPPElement.m in Sources */,
 				898A09261B85BE3600056C56 /* XMPPvCardTempBase.m in Sources */,
+				89164E3B1B870B8E0071EF83 /* BaseNavigationController.m in Sources */,
 				898A09301B85BE3600056C56 /* XMPPIQ+XEP_0066.m in Sources */,
 				898A09531B85BE3600056C56 /* NSXMLElement+XEP_0335.m in Sources */,
 				898A091B1B85BE3600056C56 /* XMPPMessage+XEP0045.m in Sources */,
@@ -1499,6 +1625,7 @@
 				898A095B1B85BE3600056C56 /* DDAbstractDatabaseLogger.m in Sources */,
 				898A095E1B85BE3600056C56 /* DDLog.m in Sources */,
 				898A09601B85BE3600056C56 /* ContextFilterLogFormatter.m in Sources */,
+				89164E271B86CCFA0071EF83 /* UIButton+WF.m in Sources */,
 				898A095D1B85BE3600056C56 /* DDFileLogger.m in Sources */,
 				898A09511B85BE3600056C56 /* XMPPMessage+XEP_0308.m in Sources */,
 				898A090D1B85BE3600056C56 /* XMPPIQ+LastActivity.m in Sources */,
@@ -1513,10 +1640,14 @@
 				898A09021B85BE3600056C56 /* XMPPRoster.xcdatamodel in Sources */,
 				898A093A1B85BE3600056C56 /* XMPPCapsCoreDataStorageObject.m in Sources */,
 				898A09541B85BE3600056C56 /* DDList.m in Sources */,
+				89164E451B8719CB0071EF83 /* UserInfo.m in Sources */,
+				89164E2B1B86CCFA0071EF83 /* UITextField+WF.m in Sources */,
 				898A09611B85BE3600056C56 /* DispatchQueueLogFormatter.m in Sources */,
+				89164E291B86CCFA0071EF83 /* UIScreen+WF.m in Sources */,
 				898A08F81B85BE3600056C56 /* XMPPParser.m in Sources */,
 				898A08FA1B85BE3600056C56 /* XMPPStream.m in Sources */,
 				898A08ED1B85BE3600056C56 /* XMPPPlainAuthentication.m in Sources */,
+				89164E2C1B86CCFA0071EF83 /* UIView+WF.m in Sources */,
 				898A09491B85BE3600056C56 /* XMPPPing.m in Sources */,
 				898A094B1B85BE3600056C56 /* XMPPTime.m in Sources */,
 				898A090F1B85BE3600056C56 /* XMPPPrivacy.m in Sources */,
@@ -1532,6 +1663,7 @@
 				898A09251B85BE3600056C56 /* XMPPvCardTempAdrTypes.m in Sources */,
 				898A09111B85BE3600056C56 /* XMPPRoomCoreDataStorage.m in Sources */,
 				898A09371B85BE3600056C56 /* NSString+XEP_0106.m in Sources */,
+				89164E3E1B87138E0071EF83 /* PersonTableViewController.m in Sources */,
 				898A091C1B85BE3600056C56 /* XMPPMUC.m in Sources */,
 				898A08FC1B85BE3600056C56 /* XMPPCoreDataStorage.m in Sources */,
 				898A08EF1B85BE3600056C56 /* XMPPXOAuth2Google.m in Sources */,
@@ -1546,12 +1678,14 @@
 				898A09441B85BE3600056C56 /* XMPPPresence+XEP_0172.m in Sources */,
 				898A090C1B85BE3600056C56 /* XMPPJabberRPCModule.m in Sources */,
 				898A09331B85BE3600056C56 /* XMPPDateTimeProfiles.m in Sources */,
+				89164E331B86FB470071EF83 /* MBProgressHUD+HM.m in Sources */,
 				898A09311B85BE3600056C56 /* XMPPMessage+XEP_0066.m in Sources */,
 				898A08F41B85BE3600056C56 /* XMPPIQ.m in Sources */,
 				898A092D1B85BE3600056C56 /* XMPPIQ+XEP_0060.m in Sources */,
 				898A08E91B85BE3600056C56 /* XMPPAnonymousAuthentication.m in Sources */,
 				898A095C1B85BE3600056C56 /* DDASLLogger.m in Sources */,
 				898A09231B85BE3600056C56 /* XMPPvCardTemp.m in Sources */,
+				89164E281B86CCFA0071EF83 /* UIImage+WF.m in Sources */,
 				898A090A1B85BE3600056C56 /* XMPPIQ+JabberRPC.m in Sources */,
 				898A09061B85BE3600056C56 /* XMPPRosterMemoryStorage.m in Sources */,
 				898A091D1B85BE3600056C56 /* XMPPRoom.m in Sources */,
