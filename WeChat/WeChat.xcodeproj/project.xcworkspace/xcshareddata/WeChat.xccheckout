@@ -10,14 +10,22 @@
 	<string>WeChat</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>15B5008E1164A2EFF43A8191A132809B83B965D7</key>
+=======
+		<key>997C716639E70EC067FAD2223EDC84E7C3A8DD16</key>
+>>>>>>> c34469b45c16c91d907a5f4fd7710173e0b37193
 		<string>github.com:bestLiu/WeChat.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>WeChat/WeChat.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>15B5008E1164A2EFF43A8191A132809B83B965D7</key>
+=======
+		<key>997C716639E70EC067FAD2223EDC84E7C3A8DD16</key>
+>>>>>>> c34469b45c16c91d907a5f4fd7710173e0b37193
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +33,22 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
+<<<<<<< HEAD
 	<string>15B5008E1164A2EFF43A8191A132809B83B965D7</string>
+=======
+	<string>997C716639E70EC067FAD2223EDC84E7C3A8DD16</string>
+>>>>>>> c34469b45c16c91d907a5f4fd7710173e0b37193
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+<<<<<<< HEAD
 			<string>15B5008E1164A2EFF43A8191A132809B83B965D7</string>
+=======
+			<string>997C716639E70EC067FAD2223EDC84E7C3A8DD16</string>
+>>>>>>> c34469b45c16c91d907a5f4fd7710173e0b37193
 			<key>IDESourceControlWCCName</key>
 			<string>WeChat</string>
 		</dict>
