@@ -20,6 +20,9 @@ singleton_interface(UserInfo);
 @property (nonatomic, assign) BOOL loginStatus;
 
 
+@property (nonatomic, copy) NSString *registUser; //注册的用户名
+@property (nonatomic, copy) NSString *registPwd; //注册的密码
+
 - (void)loadUserInfoFromSandbox;
 
 - (void)saveUserInfoToSandBox;

@@ -82,8 +82,13 @@
     // 设置登录用户JID
     //resource 标识用户登录的客户端 iphone android
     
-    //从沙盒获取用户名
-    NSString *user = [UserInfo sharedUserInfo].user;
+    //从单例获取用户名
+    NSString *user = nil;
+    if (self.isRegiseterOperation) {
+        user = [UserInfo sharedUserInfo].registUser;
+    }else{
+        user = [UserInfo sharedUserInfo].user;
+    }
     XMPPJID *myJID = [XMPPJID jidWithUser:user domain:@"liuchun.local" resource:@"iphone" ];
     _xmppStream.myJID = myJID;
     
@@ -131,8 +136,15 @@
 -(void)xmppStreamDidConnect:(XMPPStream *)sender{
     NSLog(@"与主机连接成功");
     
-    // 主机连接成功后，发送密码进行授权
-    [self sendPwdToHost];
+    if (self.isRegiseterOperation) {//注册操作，发送注册密码
+        NSString *pwd = [UserInfo sharedUserInfo].registPwd;
+        [_xmppStream registerWithPassword:pwd error:nil];
+    }
+    else{//登录操作
+        // 主机连接成功后，发送密码进行授权
+        [self sendPwdToHost];
+
+    }
 }
 #pragma mark  与主机断开连接
 -(void)xmppStreamDidDisconnect:(XMPPStream *)sender withError:(NSError *)error{
@@ -162,6 +174,22 @@
     
 }
 
+// 注册成功
+-(void)xmppStreamDidRegister:(XMPPStream *)sender
+{
+    LCLog(@"注册成功");
+    if (_reslutBlock) {
+        _reslutBlock(XMPPResultTypeRegisterSuccess);
+    }
+}
+
+// 注册失败
+-(void)xmppStream:(XMPPStream *)sender didNotRegister:(DDXMLElement *)error
+{
+    if (_reslutBlock) {
+        _reslutBlock(XMPPResultTypeRegisterFailure);
+    }
+}
 
 #pragma mark 授权失败
 -(void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(DDXMLElement *)error{
@@ -197,7 +225,23 @@
     
     //如果以前连接过服务器，要断开
     [_xmppStream disconnect];
+    
+    //链接到主机发送登录密码
     [self connectToHost];
 }
+
+
+- (void)xmppUserRegist:(XMPPResultBock)resultBlcok
+{
+    // 先把block存起来
+    _reslutBlock = resultBlcok;
+    
+    //如果以前连接过服务器，要断开
+    [_xmppStream disconnect];
+    
+    //连接到主机发送注册密码
+    [self connectToHost];
+}
+
 
 @end

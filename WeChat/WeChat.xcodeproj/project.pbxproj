@@ -21,6 +21,8 @@
 		89164E3E1B87138E0071EF83 /* PersonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E3D1B87138E0071EF83 /* PersonTableViewController.m */; };
 		89164E411B87184C0071EF83 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E401B87184C0071EF83 /* LoginViewController.m */; };
 		89164E451B8719CB0071EF83 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E441B8719CB0071EF83 /* UserInfo.m */; };
+		897F0FE41B8C0F3E0091EA30 /* BaseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897F0FE31B8C0F3E0091EA30 /* BaseLoginViewController.m */; };
+		897F0FE71B8C13720091EA30 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897F0FE61B8C13720091EA30 /* RegistViewController.m */; };
 		898A07781B85BDC200056C56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 898A07771B85BDC200056C56 /* main.m */; };
 		898A077B1B85BDC200056C56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 898A077A1B85BDC200056C56 /* AppDelegate.m */; };
 		898A077E1B85BDC200056C56 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898A077D1B85BDC200056C56 /* ViewController.m */; };
@@ -201,6 +203,10 @@
 		89164E421B87199E0071EF83 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		89164E431B8719CB0071EF83 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		89164E441B8719CB0071EF83 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		897F0FE21B8C0F3E0091EA30 /* BaseLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLoginViewController.h; sourceTree = "<group>"; };
+		897F0FE31B8C0F3E0091EA30 /* BaseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseLoginViewController.m; sourceTree = "<group>"; };
+		897F0FE51B8C13720091EA30 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
+		897F0FE61B8C13720091EA30 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
 		898A07721B85BDC200056C56 /* WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898A07761B85BDC200056C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		898A07771B85BDC200056C56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -509,10 +515,14 @@
 		89164E121B86CA1D0071EF83 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				897F0FE21B8C0F3E0091EA30 /* BaseLoginViewController.h */,
+				897F0FE31B8C0F3E0091EA30 /* BaseLoginViewController.m */,
 				89164E3F1B87184C0071EF83 /* LoginViewController.h */,
 				89164E401B87184C0071EF83 /* LoginViewController.m */,
 				89164E161B86CADB0071EF83 /* OtherLoginViewController.h */,
 				89164E171B86CADB0071EF83 /* OtherLoginViewController.m */,
+				897F0FE51B8C13720091EA30 /* RegistViewController.h */,
+				897F0FE61B8C13720091EA30 /* RegistViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1419,13 +1429,13 @@
 			path = libidn;
 			sourceTree = "<group>";
 		};
-		898A096C1B85BE6900056C56 /* 登录 */ = {
+		898A096C1B85BE6900056C56 /* 登录注册 */ = {
 			isa = PBXGroup;
 			children = (
 				89164E121B86CA1D0071EF83 /* Controller */,
 				898A09691B85BE4B00056C56 /* Login.storyboard */,
 			);
-			name = "登录";
+			name = "登录注册";
 			sourceTree = "<group>";
 		};
 		898A096D1B85BE7C00056C56 /* 主页 */ = {
@@ -1447,7 +1457,7 @@
 				89164E461B871E8B0071EF83 /* Model */,
 				89164E471B871EAB0071EF83 /* BaseViewController */,
 				898A09731B85C17300056C56 /* Libs */,
-				898A096C1B85BE6900056C56 /* 登录 */,
+				898A096C1B85BE6900056C56 /* 登录注册 */,
 				898A096D1B85BE7C00056C56 /* 主页 */,
 			);
 			name = Classes;
@@ -1606,6 +1616,7 @@
 				898A09141B85BE3600056C56 /* XMPPRoomHybrid.xcdatamodeld in Sources */,
 				89164E2A1B86CCFA0071EF83 /* UIStoryboard+WF.m in Sources */,
 				898A09081B85BE3600056C56 /* XMPPRoster.m in Sources */,
+				897F0FE71B8C13720091EA30 /* RegistViewController.m in Sources */,
 				898A09571B85BE3600056C56 /* XMPPIDTracker.m in Sources */,
 				898A09321B85BE3600056C56 /* NSDate+XMPPDateTimeProfiles.m in Sources */,
 				898A09661B85BE3600056C56 /* DDXMLNode.m in Sources */,
@@ -1682,6 +1693,7 @@
 				898A09311B85BE3600056C56 /* XMPPMessage+XEP_0066.m in Sources */,
 				898A08F41B85BE3600056C56 /* XMPPIQ.m in Sources */,
 				898A092D1B85BE3600056C56 /* XMPPIQ+XEP_0060.m in Sources */,
+				897F0FE41B8C0F3E0091EA30 /* BaseLoginViewController.m in Sources */,
 				898A08E91B85BE3600056C56 /* XMPPAnonymousAuthentication.m in Sources */,
 				898A095C1B85BE3600056C56 /* DDASLLogger.m in Sources */,
 				898A09231B85BE3600056C56 /* XMPPvCardTemp.m in Sources */,
