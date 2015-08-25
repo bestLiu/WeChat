@@ -104,6 +104,9 @@
         }
     });
 }
+- (IBAction)cancelButtonClick:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 

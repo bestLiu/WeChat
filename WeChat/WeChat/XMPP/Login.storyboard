@@ -118,7 +118,7 @@
         <!--其它方式登录导航-->
         <scene sceneID="rdA-67-wEg">
             <objects>
-                <navigationController id="WmO-1v-dVN" userLabel="其它方式登录导航" sceneMemberID="viewController">
+                <navigationController id="WmO-1v-dVN" userLabel="其它方式登录导航" customClass="BaseNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sjj-fW-hyc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -197,7 +197,14 @@
                             <constraint firstItem="Aih-vT-il7" firstAttribute="top" secondItem="iWK-oa-JrC" secondAttribute="bottom" constant="43" id="TrT-nH-bKX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vMD-XQ-oFz"/>
+                    <navigationItem key="navigationItem" id="vMD-XQ-oFz">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="HLv-yL-aGx">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancelButtonClick:" destination="tr7-Kf-vMd" id="MNI-sn-jcs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="leftCos" destination="8to-FY-6fn" id="ehZ-Fp-Zxu"/>
                         <outlet property="loginButton" destination="LTd-tz-ghV" id="3LJ-MH-vFm"/>
@@ -213,7 +220,7 @@
         <!--注册导航-->
         <scene sceneID="2NF-rQ-QKa">
             <objects>
-                <navigationController id="OfL-PA-F6U" userLabel="注册导航" sceneMemberID="viewController">
+                <navigationController id="OfL-PA-F6U" userLabel="注册导航" customClass="BaseNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dpc-2C-PDN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -241,7 +248,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgs-ft-Ke6">
                                 <rect key="frame" x="100" y="107" width="400" height="200"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请输入手机号码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84H-r3-3ZT" userLabel="用户名">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84H-r3-3ZT" userLabel="用户名">
                                         <rect key="frame" x="8" y="21" width="384" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="iab-V7-QsO"/>
@@ -251,6 +258,17 @@
                                         <connections>
                                             <action selector="userTf" destination="nwd-L1-sXA" eventType="editingDidEnd" id="7Zf-7P-epk"/>
                                             <action selector="userTfChange:" destination="nwd-L1-sXA" eventType="editingDidEnd" id="bFu-b8-0jR"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OIM-gZ-li2" userLabel="密码">
+                                        <rect key="frame" x="8" y="76" width="384" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="4xd-N3-oyE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="pwdChange:" destination="nwd-L1-sXA" eventType="editingDidEnd" id="Tdf-fu-GUg"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpy-as-YGu">
@@ -265,17 +283,6 @@
                                             <action selector="registerButtonClick:" destination="nwd-L1-sXA" eventType="touchUpInside" id="GQ9-oO-Tm3"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请输入密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OIM-gZ-li2" userLabel="密码">
-                                        <rect key="frame" x="8" y="76" width="384" height="42"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="42" id="4xd-N3-oyE"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="pwdChange:" destination="nwd-L1-sXA" eventType="editingDidEnd" id="Tdf-fu-GUg"/>
-                                        </connections>
-                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -300,7 +307,14 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="zQG-jx-bOO"/>
+                    <navigationItem key="navigationItem" id="zQG-jx-bOO">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="99B-JF-e4f">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancelButtonClick:" destination="nwd-L1-sXA" id="LPr-lq-u8C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="leftCos" destination="yDO-eY-rdH" id="lTg-Ar-8xW"/>
