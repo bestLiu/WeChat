@@ -33,9 +33,10 @@
     //登录之前提示
     __weak typeof(self) weakSelf = self;
     [MBProgressHUD showMessage:@"正在登录中..." toView:self.view];
-    AppDelegate *app = [UIApplication sharedApplication].delegate;
-    app.regiseterOperation = NO;
-    [app xmppUserLogin:^(XMPPResultType type) {
+    
+    XMPPTool *tool = [XMPPTool sharedXMPPTool];
+    tool.regiseterOperation = NO;
+    [tool xmppUserLogin:^(XMPPResultType type) {
         [weakSelf handleResultType:type];
     }];
 }

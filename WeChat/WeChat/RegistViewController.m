@@ -63,13 +63,14 @@
     info.registUser = self.userTf.text;
     info.registPwd = self.pwdTf.text;
     
-    //2.调用Appdelegate的注册方法
-    AppDelegate *app = [UIApplication sharedApplication].delegate;
-    app.regiseterOperation = YES;
+    //2.调用单例类的注册方法
+//    AppDelegate *app = [UIApplication sharedApplication].delegate;
+//    app.regiseterOperation = YES;
+    [XMPPTool sharedXMPPTool].regiseterOperation = YES;
     
     __weak typeof(self) weakSelf = self;
     [MBProgressHUD showMessage:@"正在注册中..." toView:self.view];
-    [app xmppUserRegist:^(XMPPResultType type) {
+    [[XMPPTool sharedXMPPTool] xmppUserRegist:^(XMPPResultType type) {
         [weakSelf handleResultType:type];
     }];
 }

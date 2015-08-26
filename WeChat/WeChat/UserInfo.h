@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Singleton.h"
 
+static NSString *domain = @"liuchun.local";
 @interface UserInfo : NSObject
 
 singleton_interface(UserInfo);
@@ -22,6 +23,8 @@ singleton_interface(UserInfo);
 
 @property (nonatomic, copy) NSString *registUser; //注册的用户名
 @property (nonatomic, copy) NSString *registPwd; //注册的密码
+
+@property (nonatomic, copy) NSString *jid;
 
 - (void)loadUserInfoFromSandbox;
 

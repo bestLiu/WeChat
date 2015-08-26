@@ -161,6 +161,11 @@
 		898A096A1B85BE4B00056C56 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898A09691B85BE4B00056C56 /* Login.storyboard */; };
 		898A09701B85BEE000056C56 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 898A096F1B85BEE000056C56 /* libxml2.dylib */; };
 		898A09721B85BEE600056C56 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 898A09711B85BEE600056C56 /* libresolv.dylib */; };
+		89BE42B41B8D55D9004ACC19 /* XMPPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BE42B31B8D55D9004ACC19 /* XMPPTool.m */; };
+		89BE42B71B8D7F71004ACC19 /* PersonNextTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BE42B61B8D7F71004ACC19 /* PersonNextTableViewController.m */; };
+		89BE42BA1B8D8869004ACC19 /* EditvCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BE42B91B8D8869004ACC19 /* EditvCardTableViewController.m */; };
+		89BE42BD1B8D9E40004ACC19 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BE42BC1B8D9E40004ACC19 /* ContactsTableViewController.m */; };
+		89BE42C91B8DB20D004ACC19 /* AddContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BE42C81B8DB20D004ACC19 /* AddContactTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -489,6 +494,16 @@
 		898A096B1B85BE5400056C56 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		898A096F1B85BEE000056C56 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		898A09711B85BEE600056C56 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
+		89BE42B21B8D55D9004ACC19 /* XMPPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPTool.h; sourceTree = "<group>"; };
+		89BE42B31B8D55D9004ACC19 /* XMPPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPTool.m; sourceTree = "<group>"; };
+		89BE42B51B8D7F71004ACC19 /* PersonNextTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonNextTableViewController.h; sourceTree = "<group>"; };
+		89BE42B61B8D7F71004ACC19 /* PersonNextTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonNextTableViewController.m; sourceTree = "<group>"; };
+		89BE42B81B8D8869004ACC19 /* EditvCardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditvCardTableViewController.h; sourceTree = "<group>"; };
+		89BE42B91B8D8869004ACC19 /* EditvCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditvCardTableViewController.m; sourceTree = "<group>"; };
+		89BE42BB1B8D9E40004ACC19 /* ContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
+		89BE42BC1B8D9E40004ACC19 /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
+		89BE42C71B8DB20D004ACC19 /* AddContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactTableViewController.h; sourceTree = "<group>"; };
+		89BE42C81B8DB20D004ACC19 /* AddContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -565,6 +580,8 @@
 				89164E421B87199E0071EF83 /* Singleton.h */,
 				89164E431B8719CB0071EF83 /* UserInfo.h */,
 				89164E441B8719CB0071EF83 /* UserInfo.m */,
+				89BE42B21B8D55D9004ACC19 /* XMPPTool.h */,
+				89BE42B31B8D55D9004ACC19 /* XMPPTool.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -583,6 +600,10 @@
 			children = (
 				89164E3C1B87138E0071EF83 /* PersonTableViewController.h */,
 				89164E3D1B87138E0071EF83 /* PersonTableViewController.m */,
+				89BE42B51B8D7F71004ACC19 /* PersonNextTableViewController.h */,
+				89BE42B61B8D7F71004ACC19 /* PersonNextTableViewController.m */,
+				89BE42B81B8D8869004ACC19 /* EditvCardTableViewController.h */,
+				89BE42B91B8D8869004ACC19 /* EditvCardTableViewController.m */,
 			);
 			name = "个人中心";
 			sourceTree = "<group>";
@@ -783,14 +804,14 @@
 				898A07D21B85BE3500056C56 /* CoreDataStorage */,
 				898A07D61B85BE3500056C56 /* GoogleSharedStatus */,
 				898A07D91B85BE3500056C56 /* ProcessOne */,
-				898A07DC1B85BE3500056C56 /* Reconnect */,
-				898A07DF1B85BE3500056C56 /* Roster */,
+				898A07DC1B85BE3500056C56 /* Reconnect 【自动连接模块】 */,
+				898A07DF1B85BE3500056C56 /* Roster 【花名册模块】 */,
 				898A07F71B85BE3500056C56 /* SystemInputActivityMonitor */,
 				898A07FA1B85BE3500056C56 /* XEP-0009 */,
 				898A08011B85BE3500056C56 /* XEP-0012 */,
 				898A08061B85BE3500056C56 /* XEP-0016 */,
 				898A08091B85BE3500056C56 /* XEP-0045 */,
-				898A082D1B85BE3500056C56 /* XEP-0054 */,
+				898A082D1B85BE3500056C56 /* XEP-0054[电子名片模块] */,
 				898A08491B85BE3500056C56 /* XEP-0059 */,
 				898A084E1B85BE3500056C56 /* XEP-0060 */,
 				898A08531B85BE3500056C56 /* XEP-0065 */,
@@ -856,16 +877,17 @@
 			path = ProcessOne;
 			sourceTree = "<group>";
 		};
-		898A07DC1B85BE3500056C56 /* Reconnect */ = {
+		898A07DC1B85BE3500056C56 /* Reconnect 【自动连接模块】 */ = {
 			isa = PBXGroup;
 			children = (
 				898A07DD1B85BE3500056C56 /* XMPPReconnect.h */,
 				898A07DE1B85BE3500056C56 /* XMPPReconnect.m */,
 			);
+			name = "Reconnect 【自动连接模块】";
 			path = Reconnect;
 			sourceTree = "<group>";
 		};
-		898A07DF1B85BE3500056C56 /* Roster */ = {
+		898A07DF1B85BE3500056C56 /* Roster 【花名册模块】 */ = {
 			isa = PBXGroup;
 			children = (
 				898A07E01B85BE3500056C56 /* CoreDataStorage */,
@@ -876,6 +898,7 @@
 				898A07F51B85BE3500056C56 /* XMPPRosterPrivate.h */,
 				898A07F61B85BE3500056C56 /* XMPPUser.h */,
 			);
+			name = "Roster 【花名册模块】";
 			path = Roster;
 			sourceTree = "<group>";
 		};
@@ -1012,7 +1035,7 @@
 			path = MemoryStorage;
 			sourceTree = "<group>";
 		};
-		898A082D1B85BE3500056C56 /* XEP-0054 */ = {
+		898A082D1B85BE3500056C56 /* XEP-0054[电子名片模块] */ = {
 			isa = PBXGroup;
 			children = (
 				898A082E1B85BE3500056C56 /* CoreDataStorage */,
@@ -1033,6 +1056,7 @@
 				898A08471B85BE3500056C56 /* XMPPvCardTempTel.h */,
 				898A08481B85BE3500056C56 /* XMPPvCardTempTel.m */,
 			);
+			name = "XEP-0054[电子名片模块]";
 			path = "XEP-0054";
 			sourceTree = "<group>";
 		};
@@ -1444,6 +1468,7 @@
 				898A077C1B85BDC200056C56 /* ViewController.h */,
 				898A077D1B85BDC200056C56 /* ViewController.m */,
 				898A077F1B85BDC200056C56 /* Main.storyboard */,
+				89BE42BE1B8D9E49004ACC19 /* 通讯录 */,
 				89164E481B87237A0071EF83 /* 个人中心 */,
 			);
 			name = "主页";
@@ -1471,6 +1496,17 @@
 				898A079B1B85BE3500056C56 /* XMPP */,
 			);
 			name = Libs;
+			sourceTree = "<group>";
+		};
+		89BE42BE1B8D9E49004ACC19 /* 通讯录 */ = {
+			isa = PBXGroup;
+			children = (
+				89BE42BB1B8D9E40004ACC19 /* ContactsTableViewController.h */,
+				89BE42BC1B8D9E40004ACC19 /* ContactsTableViewController.m */,
+				89BE42C71B8DB20D004ACC19 /* AddContactTableViewController.h */,
+				89BE42C81B8DB20D004ACC19 /* AddContactTableViewController.m */,
+			);
+			name = "通讯录";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1587,6 +1623,7 @@
 				898A08F51B85BE3600056C56 /* XMPPJID.m in Sources */,
 				89164E351B86FB470071EF83 /* MBProgressHUD.m in Sources */,
 				898A08F11B85BE3600056C56 /* NSNumber+XMPP.m in Sources */,
+				89BE42C91B8DB20D004ACC19 /* AddContactTableViewController.m in Sources */,
 				898A09481B85BE3600056C56 /* XMPPAutoPing.m in Sources */,
 				898A093C1B85BE3600056C56 /* XMPPCapabilities.m in Sources */,
 				898A08FB1B85BE3600056C56 /* XMPPBandwidthMonitor.m in Sources */,
@@ -1601,6 +1638,7 @@
 				898A090B1B85BE3600056C56 /* XMPPIQ+JabberRPCResonse.m in Sources */,
 				898A08EB1B85BE3600056C56 /* XMPPDeprecatedPlainAuthentication.m in Sources */,
 				898A09651B85BE3600056C56 /* DDXMLElement.m in Sources */,
+				89BE42B71B8D7F71004ACC19 /* PersonNextTableViewController.m in Sources */,
 				898A09421B85BE3600056C56 /* XMPPvCardAvatarModule.m in Sources */,
 				898A09201B85BE3600056C56 /* XMPPvCardCoreDataStorage.m in Sources */,
 				898A091A1B85BE3600056C56 /* XMPPRoomOccupantMemoryStorageObject.m in Sources */,
@@ -1617,6 +1655,7 @@
 				89164E2A1B86CCFA0071EF83 /* UIStoryboard+WF.m in Sources */,
 				898A09081B85BE3600056C56 /* XMPPRoster.m in Sources */,
 				897F0FE71B8C13720091EA30 /* RegistViewController.m in Sources */,
+				89BE42B41B8D55D9004ACC19 /* XMPPTool.m in Sources */,
 				898A09571B85BE3600056C56 /* XMPPIDTracker.m in Sources */,
 				898A09321B85BE3600056C56 /* NSDate+XMPPDateTimeProfiles.m in Sources */,
 				898A09661B85BE3600056C56 /* DDXMLNode.m in Sources */,
@@ -1709,6 +1748,7 @@
 				898A09341B85BE3600056C56 /* XMPPMessage+XEP_0085.m in Sources */,
 				898A095A1B85BE3600056C56 /* GCDAsyncSocket.m in Sources */,
 				898A09211B85BE3600056C56 /* XMPPvCardCoreDataStorageObject.m in Sources */,
+				89BE42BD1B8D9E40004ACC19 /* ContactsTableViewController.m in Sources */,
 				898A09631B85BE3600056C56 /* NSString+DDXML.m in Sources */,
 				898A09591B85BE3600056C56 /* XMPPStringPrep.m in Sources */,
 				898A07781B85BDC200056C56 /* main.m in Sources */,
@@ -1717,6 +1757,7 @@
 				898A09161B85BE3600056C56 /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,
 				898A094A1B85BE3600056C56 /* XMPPAutoTime.m in Sources */,
 				898A08F91B85BE3600056C56 /* XMPPPresence.m in Sources */,
+				89BE42BA1B8D8869004ACC19 /* EditvCardTableViewController.m in Sources */,
 				898A09181B85BE3600056C56 /* XMPPRoomMemoryStorage.m in Sources */,
 				898A092B1B85BE3600056C56 /* NSXMLElement+XEP_0059.m in Sources */,
 				898A09451B85BE3600056C56 /* XMPPMessage+XEP_0184.m in Sources */,

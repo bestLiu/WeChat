@@ -7,12 +7,15 @@
 //
 
 #import "UserInfo.h"
-
-@implementation UserInfo
-
 #define kUserKey @"user"
 #define kPswKey @"psw"
 #define kLoginStatusKey @"loginStatus"
+
+
+
+@implementation UserInfo
+
+
 
 singleton_implementation(UserInfo);
 
@@ -30,6 +33,11 @@ singleton_implementation(UserInfo);
     [ud setObject:self.psw forKey:kPswKey];
     [ud setBool:self.loginStatus forKey:kLoginStatusKey];
     [ud synchronize];
+}
+
+- (NSString *)jid
+{
+    return [NSString stringWithFormat:@"%@@%@",self.user,domain];
 }
 
 

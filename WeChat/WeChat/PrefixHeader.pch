@@ -16,6 +16,7 @@
 #import "Category/CategoryWF.h"
 #import "MBProgessHUD/MBProgressHUD+HM.h"
 #import "UserInfo.h"
+#import "XMPPTool.h"
 
 
 //自定义log
