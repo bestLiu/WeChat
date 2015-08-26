@@ -36,7 +36,7 @@
     [self.cell layoutSubviews];
     
     // 2、当天控制器消失
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
     if ([self.delegate respondsToSelector:@selector(EditPorfileDidSave)]) {
         [_delegate EditPorfileDidSave];//通知代理，点击保存按钮
     }

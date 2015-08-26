@@ -60,9 +60,13 @@
     
     if ([destVC isKindOfClass:[BaseNavigationController class]]) {
         BaseNavigationController *navVC = destVC;
-        RegistViewController *registVC = navVC.viewControllers[0];
-        //设置代理
-        registVC.delegate = self;
+        for (UIViewController *vc in navVC.viewControllers) {
+            if ([vc isKindOfClass:[RegistViewController class]]) {
+                RegistViewController *registVC = (RegistViewController *)vc;
+                //设置代理
+                registVC.delegate = self;
+            }
+        }
     }
 }
 

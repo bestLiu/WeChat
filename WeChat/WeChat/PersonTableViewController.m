@@ -28,8 +28,8 @@
 
 @implementation PersonTableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
     //显示当前用户个人信息
     

@@ -39,6 +39,10 @@
 #import "XMPPRosterCoreDataStorage.h"
 
 
+//消息模块
+#import "XMPPMessageArchiving.h"
+#import "XMPPMessageArchivingCoreDataStorage.h"
+
 //#import "XMPPRosterMemoryStorage.h"
 
 

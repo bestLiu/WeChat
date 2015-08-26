@@ -34,7 +34,7 @@
     NSManagedObjectContext *context = [XMPPTool sharedXMPPTool].rosterStorage.mainThreadManagedObjectContext;
     
     //2、FetchRequest[查那张表]
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"XMPPUserCoreDataStroageObject"];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"XMPPUserCoreDataStorageObject"];
     
     //3、设置过滤和排序
     //过滤当前登录用户的好友
@@ -125,6 +125,13 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    //选中表格进入聊天界面
+    [self performSegueWithIdentifier:@"ChatSegue" sender:nil];
+    
+}
 //实现这个方法，cell向左滑就可以删除
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -135,5 +142,10 @@
         [[XMPPTool sharedXMPPTool].roster removeUser:friendJid];
     }
 }
+
+//- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+//{
+//    
+//}
 
 @end

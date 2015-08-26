@@ -42,13 +42,11 @@
 
 - (IBAction)userTfChange:(id)sender
 {
+    
     BOOL enabled = self.userTf.text.length !=0 && self.pwdTf.text.length !=0 ? YES : NO;
     _registButton.enabled = enabled;
 }
-- (IBAction)pwdChange:(id)sender
-{
-    [self userTfChange:nil];
-}
+
 - (IBAction)registerButtonClick:(id)sender
 {
     //判断用户输入的是否是手机号码
@@ -80,6 +78,7 @@
  */
 - (void)handleResultType:(XMPPResultType)type
 {
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         [MBProgressHUD hideHUDForView:self.view];
         switch (type) {
@@ -89,14 +88,15 @@
             case XMPPResultTypeRegisterFailure:
                 [MBProgressHUD showError:@"用户名重复" toView:self.view];
                 break;
-            case XMPPResultTypeLoginSuccess:
+            case XMPPResultTypeRegisterSuccess:
             {
                 [MBProgressHUD showSuccess:@"注册成功" toView:self.view];
+                //回到上个控制器
+                [self dismissViewControllerAnimated:YES completion:nil];
                 if ([self.delegate respondsToSelector:@selector(registViewControllerDidFinishRegist)]) {
                     [_delegate registViewControllerDidFinishRegist];
                 }
-                //回到上个控制器
-                [self dismissViewControllerAnimated:YES completion:nil];
+                
             }
                 break;
                 

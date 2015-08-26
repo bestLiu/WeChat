@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40E02C1B1B8DEEB300B41369 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E02C1A1B8DEEB300B41369 /* ChatViewController.m */; };
+		40E02C201B8DEFEA00B41369 /* ChatInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E02C1F1B8DEFEA00B41369 /* ChatInputView.m */; };
+		40E02C241B8DF16B00B41369 /* ChatInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E02C231B8DF16B00B41369 /* ChatInputView.xib */; };
 		89164E181B86CADB0071EF83 /* OtherLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E171B86CADB0071EF83 /* OtherLoginViewController.m */; };
 		89164E271B86CCFA0071EF83 /* UIButton+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E1C1B86CCFA0071EF83 /* UIButton+WF.m */; };
 		89164E281B86CCFA0071EF83 /* UIImage+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E1E1B86CCFA0071EF83 /* UIImage+WF.m */; };
@@ -179,6 +182,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40E02C191B8DEEB300B41369 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		40E02C1A1B8DEEB300B41369 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		40E02C1E1B8DEFEA00B41369 /* ChatInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatInputView.h; sourceTree = "<group>"; };
+		40E02C1F1B8DEFEA00B41369 /* ChatInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatInputView.m; sourceTree = "<group>"; };
+		40E02C231B8DF16B00B41369 /* ChatInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatInputView.xib; sourceTree = "<group>"; };
 		89164E161B86CADB0071EF83 /* OtherLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherLoginViewController.h; sourceTree = "<group>"; };
 		89164E171B86CADB0071EF83 /* OtherLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherLoginViewController.m; sourceTree = "<group>"; };
 		89164E1A1B86CCFA0071EF83 /* CategoryWF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryWF.h; sourceTree = "<group>"; };
@@ -527,6 +535,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40E02C1C1B8DEFB700B41369 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				89BE42BB1B8D9E40004ACC19 /* ContactsTableViewController.h */,
+				89BE42BC1B8D9E40004ACC19 /* ContactsTableViewController.m */,
+				89BE42C71B8DB20D004ACC19 /* AddContactTableViewController.h */,
+				89BE42C81B8DB20D004ACC19 /* AddContactTableViewController.m */,
+				40E02C191B8DEEB300B41369 /* ChatViewController.h */,
+				40E02C1A1B8DEEB300B41369 /* ChatViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		40E02C1D1B8DEFC600B41369 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40E02C1E1B8DEFEA00B41369 /* ChatInputView.h */,
+				40E02C1F1B8DEFEA00B41369 /* ChatInputView.m */,
+				40E02C231B8DF16B00B41369 /* ChatInputView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		89164E121B86CA1D0071EF83 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -1468,8 +1499,6 @@
 				898A077C1B85BDC200056C56 /* ViewController.h */,
 				898A077D1B85BDC200056C56 /* ViewController.m */,
 				898A077F1B85BDC200056C56 /* Main.storyboard */,
-				89BE42BE1B8D9E49004ACC19 /* 通讯录 */,
-				89164E481B87237A0071EF83 /* 个人中心 */,
 			);
 			name = "主页";
 			sourceTree = "<group>";
@@ -1483,6 +1512,8 @@
 				89164E471B871EAB0071EF83 /* BaseViewController */,
 				898A09731B85C17300056C56 /* Libs */,
 				898A096C1B85BE6900056C56 /* 登录注册 */,
+				89164E481B87237A0071EF83 /* 个人中心 */,
+				89BE42BE1B8D9E49004ACC19 /* 通讯录 */,
 				898A096D1B85BE7C00056C56 /* 主页 */,
 			);
 			name = Classes;
@@ -1501,10 +1532,8 @@
 		89BE42BE1B8D9E49004ACC19 /* 通讯录 */ = {
 			isa = PBXGroup;
 			children = (
-				89BE42BB1B8D9E40004ACC19 /* ContactsTableViewController.h */,
-				89BE42BC1B8D9E40004ACC19 /* ContactsTableViewController.m */,
-				89BE42C71B8DB20D004ACC19 /* AddContactTableViewController.h */,
-				89BE42C81B8DB20D004ACC19 /* AddContactTableViewController.m */,
+				40E02C1D1B8DEFC600B41369 /* Views */,
+				40E02C1C1B8DEFB700B41369 /* Controllers */,
 			);
 			name = "通讯录";
 			sourceTree = "<group>";
@@ -1594,6 +1623,7 @@
 				898A096A1B85BE4B00056C56 /* Login.storyboard in Resources */,
 				898A07861B85BDC200056C56 /* LaunchScreen.xib in Resources */,
 				898A09621B85BE3600056C56 /* README.txt in Resources */,
+				40E02C241B8DF16B00B41369 /* ChatInputView.xib in Resources */,
 				898A07831B85BDC200056C56 /* Images.xcassets in Resources */,
 				89164E341B86FB470071EF83 /* MBProgressHUD.bundle in Resources */,
 			);
@@ -1618,6 +1648,7 @@
 				898A091E1B85BE3600056C56 /* XMPPvCard.xcdatamodeld in Sources */,
 				898A08F71B85BE3600056C56 /* XMPPModule.m in Sources */,
 				89164E411B87184C0071EF83 /* LoginViewController.m in Sources */,
+				40E02C201B8DEFEA00B41369 /* ChatInputView.m in Sources */,
 				898A08FE1B85BE3600056C56 /* XMPPProcessOne.m in Sources */,
 				898A09361B85BE3600056C56 /* XMPPTransports.m in Sources */,
 				898A08F51B85BE3600056C56 /* XMPPJID.m in Sources */,
@@ -1737,6 +1768,7 @@
 				898A095C1B85BE3600056C56 /* DDASLLogger.m in Sources */,
 				898A09231B85BE3600056C56 /* XMPPvCardTemp.m in Sources */,
 				89164E281B86CCFA0071EF83 /* UIImage+WF.m in Sources */,
+				40E02C1B1B8DEEB300B41369 /* ChatViewController.m in Sources */,
 				898A090A1B85BE3600056C56 /* XMPPIQ+JabberRPC.m in Sources */,
 				898A09061B85BE3600056C56 /* XMPPRosterMemoryStorage.m in Sources */,
 				898A091D1B85BE3600056C56 /* XMPPRoom.m in Sources */,

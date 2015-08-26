@@ -26,7 +26,9 @@
     
     XMPPvCardAvatarModule *_avatar;//头像
     
-
+    XMPPMessageArchiving *_message;//聊天模块
+    XMPPMessageArchivingCoreDataStorage *_msgSorage;//聊天的数据存储
+    
     
 }
 
@@ -78,6 +80,11 @@ singleton_implementation(XMPPTool);
     _roster = [[XMPPRoster alloc] initWithRosterStorage:_rosterStorage];
     [_roster activate:_xmppStream];
     
+    //添加聊天模块
+    _msgSorage = [[XMPPMessageArchivingCoreDataStorage alloc] init];
+    _message = [[XMPPMessageArchiving alloc] initWithMessageArchivingStorage:_msgSorage];
+    [_message activate:_xmppStream];
+    
     // 设置代理
     [_xmppStream addDelegate:self delegateQueue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)];
 }
@@ -92,6 +99,7 @@ singleton_implementation(XMPPTool);
     [_vCard deactivate];
     [_avatar deactivate];
     [_roster deactivate];
+    [_message deactivate];
     
     //断开连接
     [_xmppStream disconnect];
@@ -104,6 +112,8 @@ singleton_implementation(XMPPTool);
     _xmppStream = nil;
     _roster = nil;
     _rosterStorage = nil;
+    _message = nil;
+    _msgSorage = nil;
 }
 
 #pragma mark 连接到服务器

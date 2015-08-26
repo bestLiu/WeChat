@@ -90,7 +90,7 @@
     }
     else
     {
-        [self performSegueWithIdentifier:@"EditvCardSegue" sender:nil];
+        [self performSegueWithIdentifier:@"EditvCardSegue" sender:cell];
     }
 }
 
@@ -166,7 +166,7 @@
     //邮件
     myVCard.mailer = self.emailLabel.text;
     
-    //更新 这个方法内部会实现数据上传到服务器，无序程序自己操作
+    //更新 这个方法内部会实现数据上传到服务器，程序自己操作
     [[XMPPTool sharedXMPPTool].vCard updateMyvCardTemp:myVCard];
     
 }
@@ -175,14 +175,15 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    id desVC = segue.destinationViewController;
-    if ([desVC isKindOfClass:[EditvCardTableViewController class]]) {
-        EditvCardTableViewController *eVC = desVC;
-        eVC.delegate = self;
-        eVC.cell = sender;
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    //获取编辑个人信息的控制
+    id destVc = segue.destinationViewController;
+    if ([destVc isKindOfClass:[EditvCardTableViewController class]]) {
+        EditvCardTableViewController *editVc = destVc;
+        editVc.cell = sender;
+        editVc.delegate = self;
     }
 }
+
 
 @end
