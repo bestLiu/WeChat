@@ -76,8 +76,10 @@
     //隐藏模态窗口
     [self dismissViewControllerAnimated:NO completion:nil];
     //登录成功去主界面
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    self.view.window.rootViewController = storyboard.instantiateInitialViewController;
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    self.view.window.rootViewController = storyboard.instantiateInitialViewController;
+    
+    [UIStoryboard showInitialVCWithName:@"Main"];
 }
 
 

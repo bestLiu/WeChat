@@ -26,6 +26,7 @@
 		89164E451B8719CB0071EF83 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 89164E441B8719CB0071EF83 /* UserInfo.m */; };
 		897F0FE41B8C0F3E0091EA30 /* BaseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897F0FE31B8C0F3E0091EA30 /* BaseLoginViewController.m */; };
 		897F0FE71B8C13720091EA30 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897F0FE61B8C13720091EA30 /* RegistViewController.m */; };
+		89826C141B8F0E7400D0B715 /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89826C131B8F0E7400D0B715 /* HistoryTableViewController.m */; };
 		898A07781B85BDC200056C56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 898A07771B85BDC200056C56 /* main.m */; };
 		898A077B1B85BDC200056C56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 898A077A1B85BDC200056C56 /* AppDelegate.m */; };
 		898A077E1B85BDC200056C56 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898A077D1B85BDC200056C56 /* ViewController.m */; };
@@ -220,6 +221,8 @@
 		897F0FE31B8C0F3E0091EA30 /* BaseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseLoginViewController.m; sourceTree = "<group>"; };
 		897F0FE51B8C13720091EA30 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
 		897F0FE61B8C13720091EA30 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
+		89826C121B8F0E7400D0B715 /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
+		89826C131B8F0E7400D0B715 /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
 		898A07721B85BDC200056C56 /* WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898A07761B85BDC200056C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		898A07771B85BDC200056C56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -639,6 +642,22 @@
 			name = "个人中心";
 			sourceTree = "<group>";
 		};
+		89826C151B8F11D700D0B715 /* 微信 */ = {
+			isa = PBXGroup;
+			children = (
+				89826C121B8F0E7400D0B715 /* HistoryTableViewController.h */,
+				89826C131B8F0E7400D0B715 /* HistoryTableViewController.m */,
+			);
+			name = "微信";
+			sourceTree = "<group>";
+		};
+		89826C161B8F12FD00D0B715 /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "发现";
+			sourceTree = "<group>";
+		};
 		898A07691B85BDC200056C56 = {
 			isa = PBXGroup;
 			children = (
@@ -853,7 +872,7 @@
 				898A08661B85BE3600056C56 /* XEP-0100 */,
 				898A08691B85BE3600056C56 /* XEP-0106 */,
 				898A086C1B85BE3600056C56 /* XEP-0115 */,
-				898A08771B85BE3600056C56 /* XEP-0136 */,
+				898A08771B85BE3600056C56 /* XEP-0136 [聊天消息模块] */,
 				898A08831B85BE3600056C56 /* XEP-0153 */,
 				898A08861B85BE3600056C56 /* XEP-0172 */,
 				898A088B1B85BE3600056C56 /* XEP-0184 */,
@@ -1220,13 +1239,14 @@
 			path = CoreDataStorage;
 			sourceTree = "<group>";
 		};
-		898A08771B85BE3600056C56 /* XEP-0136 */ = {
+		898A08771B85BE3600056C56 /* XEP-0136 [聊天消息模块] */ = {
 			isa = PBXGroup;
 			children = (
 				898A08781B85BE3600056C56 /* CoreDataStorage */,
 				898A08811B85BE3600056C56 /* XMPPMessageArchiving.h */,
 				898A08821B85BE3600056C56 /* XMPPMessageArchiving.m */,
 			);
+			name = "XEP-0136 [聊天消息模块]";
 			path = "XEP-0136";
 			sourceTree = "<group>";
 		};
@@ -1499,6 +1519,10 @@
 				898A077C1B85BDC200056C56 /* ViewController.h */,
 				898A077D1B85BDC200056C56 /* ViewController.m */,
 				898A077F1B85BDC200056C56 /* Main.storyboard */,
+				89826C151B8F11D700D0B715 /* 微信 */,
+				89BE42BE1B8D9E49004ACC19 /* 通讯录 */,
+				89826C161B8F12FD00D0B715 /* 发现 */,
+				89164E481B87237A0071EF83 /* 个人中心 */,
 			);
 			name = "主页";
 			sourceTree = "<group>";
@@ -1511,10 +1535,8 @@
 				89164E461B871E8B0071EF83 /* Model */,
 				89164E471B871EAB0071EF83 /* BaseViewController */,
 				898A09731B85C17300056C56 /* Libs */,
-				898A096C1B85BE6900056C56 /* 登录注册 */,
-				89164E481B87237A0071EF83 /* 个人中心 */,
-				89BE42BE1B8D9E49004ACC19 /* 通讯录 */,
 				898A096D1B85BE7C00056C56 /* 主页 */,
+				898A096C1B85BE6900056C56 /* 登录注册 */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1730,6 +1752,7 @@
 				898A08ED1B85BE3600056C56 /* XMPPPlainAuthentication.m in Sources */,
 				89164E2C1B86CCFA0071EF83 /* UIView+WF.m in Sources */,
 				898A09491B85BE3600056C56 /* XMPPPing.m in Sources */,
+				89826C141B8F0E7400D0B715 /* HistoryTableViewController.m in Sources */,
 				898A094B1B85BE3600056C56 /* XMPPTime.m in Sources */,
 				898A090F1B85BE3600056C56 /* XMPPPrivacy.m in Sources */,
 				898A093D1B85BE3600056C56 /* XMPPMessageArchiving.xcdatamodeld in Sources */,

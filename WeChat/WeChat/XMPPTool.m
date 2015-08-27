@@ -8,6 +8,7 @@
 
 #import "XMPPTool.h"
 
+NSString *const LCLoginStatusChangeNotification = @"LCLoginStatusNotification";
 /*
  * 在AppDelegate实现登录
  
@@ -27,7 +28,7 @@
     XMPPvCardAvatarModule *_avatar;//头像
     
     XMPPMessageArchiving *_message;//聊天模块
-    XMPPMessageArchivingCoreDataStorage *_msgSorage;//聊天的数据存储
+    
     
     
 }
@@ -122,6 +123,8 @@ singleton_implementation(XMPPTool);
     if (!_xmppStream) {
         [self setupXMPPStream];
     }
+    //发送正在连接通知
+    [self postNotification:XMPPResultTypeConnecting];
     
     // 设置登录用户JID
     //resource 标识用户登录的客户端 iphone android
@@ -150,6 +153,16 @@ singleton_implementation(XMPPTool);
     
 }
 
+/**
+ *  通知首页的连接状态
+ *
+ *  @param type
+ */
+- (void)postNotification:(XMPPResultType)type
+{
+    NSDictionary *userInfo = @{@"loginStatus":@(type)};
+    [[NSNotificationCenter defaultCenter] postNotificationName:LCLoginStatusChangeNotification object:self userInfo:userInfo];
+}
 
 #pragma mark 连接到服务成功后，再发送密码授权
 -(void)sendPwdToHost{
@@ -198,6 +211,10 @@ singleton_implementation(XMPPTool);
     if (error && _reslutBlock) {
         _reslutBlock(XMPPResultTypeNetError);
     }
+    if (error) {
+        //通知HistoryViewController网络不稳定
+        [self postNotification:XMPPResultTypeNetError];
+    }
     
     //如果没有错误，表示正常的断开连接（人为断开连接）;
     
@@ -215,7 +232,7 @@ singleton_implementation(XMPPTool);
     if (_reslutBlock) {
         _reslutBlock(XMPPResultTypeLoginSuccess);
     }
-    
+    [self postNotification:XMPPResultTypeLoginSuccess];
 }
 
 // 注册成功
@@ -241,6 +258,7 @@ singleton_implementation(XMPPTool);
     if (_reslutBlock) {
         _reslutBlock(XMPPResultTypeLoginFailure);
     }
+    [self postNotification:XMPPResultTypeLoginFailure];
 }
 
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ChatInputView : UIView
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 + (instancetype)inputView;
 @end

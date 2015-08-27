@@ -11,6 +11,7 @@
 #import "XMPP/XMPPFramework.h"
 
 typedef enum{
+    XMPPResultTypeConnecting,//连接中
     XMPPResultTypeLoginSuccess,//登录成功
     XMPPResultTypeLoginFailure,//登录失败
     XMPPResultTypeNetError,     //网络不给力
@@ -18,6 +19,7 @@ typedef enum{
     XMPPResultTypeRegisterSuccess, //注册成功
     XMPPResultTypeRegisterFailure  //注册失败
 }XMPPResultType;
+extern NSString *const LCLoginStatusChangeNotification;
 
 typedef void (^XMPPResultBock)(XMPPResultType type);
 
@@ -25,10 +27,11 @@ typedef void (^XMPPResultBock)(XMPPResultType type);
 
 singleton_interface(XMPPTool);
 
-@property (nonatomic, strong) XMPPStream *xmppStream;
-@property (nonatomic, strong) XMPPvCardTempModule *vCard;//电子名片
-@property (nonatomic, strong) XMPPRoster *roster;//花名册模块
-@property (nonatomic, strong) XMPPRosterCoreDataStorage *rosterStorage;//花名册数据存储 
+@property (nonatomic, strong,readonly) XMPPStream *xmppStream;
+@property (nonatomic, strong,readonly) XMPPvCardTempModule *vCard;//电子名片
+@property (nonatomic, strong,readonly) XMPPRoster *roster;//花名册模块
+@property (nonatomic, strong,readonly) XMPPRosterCoreDataStorage *rosterStorage;//花名册数据存储
+@property (nonatomic, strong,readonly) XMPPMessageArchivingCoreDataStorage *msgSorage;//聊天的数据存储
 
 /**
  *  YES代表注册 ，NO 代表登录

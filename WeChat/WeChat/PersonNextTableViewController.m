@@ -168,7 +168,7 @@
     
     //更新 这个方法内部会实现数据上传到服务器，程序自己操作
     [[XMPPTool sharedXMPPTool].vCard updateMyvCardTemp:myVCard];
-    
+
 }
 
 

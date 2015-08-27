@@ -7,6 +7,7 @@
 //
 
 #import "ContactsTableViewController.h"
+#import "ChatViewController.h"
 
 @interface ContactsTableViewController ()<NSFetchedResultsControllerDelegate>
 {
@@ -128,8 +129,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    //获取好友
+    XMPPUserCoreDataStorageObject *friend = _resultControl.fetchedObjects[indexPath.row];
+
     //选中表格进入聊天界面
-    [self performSegueWithIdentifier:@"ChatSegue" sender:nil];
+    [self performSegueWithIdentifier:@"ChatSegue" sender:friend.jid];
     
 }
 //实现这个方法，cell向左滑就可以删除
@@ -143,9 +148,13 @@
     }
 }
 
-//- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
-//{
-//    
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    id destVC = segue.destinationViewController;
+    if ([destVC isKindOfClass:[ChatViewController class]]) {
+        ChatViewController *chatVC = destVC;
+        chatVC.friendJid = sender;
+    }
+}
 
 @end

@@ -30,7 +30,7 @@
         <!--微信-->
         <scene sceneID="m6v-Le-Kda">
             <objects>
-                <tableViewController id="D8Q-E0-h2e" userLabel="微信" sceneMemberID="viewController">
+                <tableViewController id="D8Q-E0-h2e" userLabel="微信" customClass="HistoryTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="B73-WQ-ie8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,11 +48,28 @@
                             <outlet property="delegate" destination="D8Q-E0-h2e" id="oHm-NI-ZaX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="微信" id="Yvt-Oq-Edo"/>
+                    <navigationItem key="navigationItem" title="微信" id="Yvt-Oq-Edo">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="PXf-L6-zD1">
+                            <view key="customView" contentMode="scaleToFill" id="Ejq-zA-weH">
+                                <rect key="frame" x="0.0" y="0.0" width="133" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="B99-XC-khf">
+                                        <rect key="frame" x="8" y="7" width="20" height="20"/>
+                                        <color key="color" red="1" green="0.53595291940000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="indicator" destination="B99-XC-khf" id="tUa-8s-eFo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTm-me-UbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1158" y="-530"/>
+            <point key="canvasLocation" x="1221" y="-468"/>
         </scene>
         <!--Add Contact Table View Controller-->
         <scene sceneID="Rop-wI-ENq">

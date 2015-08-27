@@ -33,7 +33,10 @@
         [self.window setRootViewController:storyboard.instantiateInitialViewController];
         
         //自动登录服务器
-        [[XMPPTool sharedXMPPTool] xmppUserLogin:nil];
+        //1s后再自动登录,一般情况下都不会马上连接，会稍微等等
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [[XMPPTool sharedXMPPTool] xmppUserLogin:nil];
+        });
     }
     return YES;
 }
