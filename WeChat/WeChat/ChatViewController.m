@@ -24,6 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.automaticallyAdjustsScrollViewInsets = NO;
+    self.navigationItem.title = [NSString stringWithFormat:@"与%@聊天中",self.friendJid.user];
     [self setupView];
     
 
@@ -32,6 +34,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
     [self loadMsg];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ChatCell"];
 }
 
 - (void)setupView
@@ -67,7 +70,7 @@
     [self.view addConstraints:inputViewHCons];
     
     //垂直方向的约束
-    NSArray *VCons = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-64-[tableView]-0-[inputView(50)]-0-|" options:0 metrics:nil views:views];
+    NSArray *VCons = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[tableView]-0-[inputView(50)]-0-|" options:0 metrics:nil views:views];
     [self.view addConstraints:VCons];
     self.inputViewConstraint = [VCons lastObject];
     self.inputViewHegihtCos = VCons[2];
@@ -90,7 +93,7 @@
     
     //查询
     _resultControl = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:context sectionNameKeyPath:nil cacheName:nil];
-    
+    _resultControl.delegate = self;
     NSError *error = nil;
     [_resultControl performFetch:&error];
     if (error) {
@@ -119,16 +122,16 @@
     
     if([msg.outgoing boolValue])//自己发的消息
     {
-        cell.textLabel.text = [NSString stringWithFormat:@"I Say:%@",msg.body];
+        cell.textLabel.text = [NSString stringWithFormat:@"我说:%@",msg.body];
     }else//别人发送的消息
     {
-        cell.textLabel.text = [NSString stringWithFormat:@"Other Say:%@",msg.body];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@说:%@",self.friendJid.user,msg.body];
     }
     
     return cell;
 }
 
-#pragma mark Resultcontroller代理 
+#pragma mark Resultcontroller代理 ，有数据改变就会调用此方法
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     //刷新数据
@@ -186,16 +189,6 @@
 /*---------------------------------------------------分割线--------------------------------------------------------------*/
 - (void)keyboardWillShow:(NSNotification *)noti
 {
-    //隐藏键盘的方法，距离底部永远为0
-    
-    self.inputViewConstraint.constant = 0;
-    [UIView animateWithDuration:0.25 animations:^{
-        [self.view layoutIfNeeded];
-    }];
-}
-
-- (void)keyboardWillHide:(NSNotification *)noti
-{
     CGRect kbEndFrame = [noti.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     
     CGFloat kbHeight = kbEndFrame.size.height;
@@ -208,11 +201,22 @@
     if ([[UIDevice currentDevice].systemVersion doubleValue] < 8.0 && UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
         kbHeight = kbEndFrame.size.width;
     }
-    [UIView animateWithDuration:0.5 animations:^{
-        [self.view layoutIfNeeded];
-    }];
+        [UIView animateWithDuration:0.25 animations:^{
+            [self.view layoutIfNeeded];
+        }];
     
     [self scrollToButtom];
+
+}
+
+- (void)keyboardWillHide:(NSNotification *)noti
+{
+        //隐藏键盘的方法，距离底部永远为0
+    
+    self.inputViewConstraint.constant = 0;
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 
 //- (void)keyboardWillChange:(NSNotification *)noti
